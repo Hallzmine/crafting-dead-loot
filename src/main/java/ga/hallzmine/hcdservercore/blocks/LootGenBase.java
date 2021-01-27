@@ -24,31 +24,29 @@ public class LootGenBase extends Block {
 
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (worldIn.isAirBlock(pos.down()) == true) {
             switch (this.loot_type) {
                 case "military":
-                    worldIn.setBlockState(pos.down(), RegistryHandler.MILITARY_LOOT.get().getDefaultState());
+                    worldIn.setBlockState(pos, RegistryHandler.MILITARY_LOOT.get().getDefaultState());
                     break;
                 case "medic":
-                    worldIn.setBlockState(pos.down(), RegistryHandler.MEDIC_LOOT.get().getDefaultState());
+                    worldIn.setBlockState(pos, RegistryHandler.MEDIC_LOOT.get().getDefaultState());
                     break;
                 case "civilian":
-                    worldIn.setBlockState(pos.down(), RegistryHandler.CIVILIAN_LOOT.get().getDefaultState());
+                    worldIn.setBlockState(pos, RegistryHandler.CIVILIAN_LOOT.get().getDefaultState());
                     break;
                 case "civilian_rare":
-                    worldIn.setBlockState(pos.down(), RegistryHandler.CIVILIAN_RARE_LOOT.get().getDefaultState());
+                    worldIn.setBlockState(pos, RegistryHandler.CIVILIAN_RARE_LOOT.get().getDefaultState());
                     break;
                 case "police":
-                    worldIn.setBlockState(pos.down(), RegistryHandler.POLICE_LOOT.get().getDefaultState());
+                    worldIn.setBlockState(pos, RegistryHandler.POLICE_LOOT.get().getDefaultState());
                     break;
             }
-        }
         super.randomTick(state, worldIn, pos, random);
     }
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-        return (VoxelShape) Block.makeCuboidShape(6,6,6,10,10,10);
+        return (VoxelShape) Block.makeCuboidShape(0,0,0,16,3,16);
     }
 
     public BlockRenderType getRenderType(BlockState state) {

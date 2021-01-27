@@ -1,5 +1,6 @@
 package ga.hallzmine.hcdservercore.blocks;
 
+import ga.hallzmine.hcdservercore.RegistryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -24,6 +25,23 @@ public class LootPileBase extends Block {
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         worldIn.destroyBlock(pos, true);
+        switch (this.loot_type) {
+            case "military":
+                worldIn.setBlockState(pos, RegistryHandler.MILITARY_LOOT_GEN.get().getDefaultState());
+                break;
+            case "medic":
+                worldIn.setBlockState(pos, RegistryHandler.MEDIC_LOOT_GEN.get().getDefaultState());
+                break;
+            case "civilian":
+                worldIn.setBlockState(pos, RegistryHandler.CIVILIAN_LOOT_GEN.get().getDefaultState());
+                break;
+            case "civilian_rare":
+                worldIn.setBlockState(pos, RegistryHandler.CIVILIAN_RARE_LOOT_GEN.get().getDefaultState());
+                break;
+            case "police":
+                worldIn.setBlockState(pos, RegistryHandler.POLICE_LOOT_GEN.get().getDefaultState());
+                break;
+        }
         return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
     }
 
