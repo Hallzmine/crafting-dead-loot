@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "":  { "model": "hcdservercore:block/loot/military_loot" }
+  }
+}

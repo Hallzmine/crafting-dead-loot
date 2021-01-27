@@ -1,0 +1,10 @@
+{
+  "block.hcdservercore.military_loot_gen": "Military Loot Generator",
+  "block.hcdservercore.police_loot_gen": "Police Loot Generator",
+  "block.hcdservercore.medic_loot_gen": "Medical Loot Generator",
+  "block.hcdservercore.civilian_loot_gen": "Civilian Loot Generator",
+  "block.hcdservercore.civilian_rare_loot_gen": "Rare Civilian Loot Generator",
+  "item.hcdservercore.parachute": "Parachute",
+  "effect.hcdservercore.parachute": "Parachute",
+  "itemGroup.hcdservercoreTab": "Hallzmine's Crafting Dead Server Core"
+}
