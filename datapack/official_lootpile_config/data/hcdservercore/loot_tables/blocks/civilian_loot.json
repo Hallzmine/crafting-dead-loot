@@ -88,7 +88,7 @@
         {"type":"minecraft:item", "weight": 5,"name":"craftingdead:bowie_knife"},
         {"type":"minecraft:item", "weight": 5,"name":"craftingdead:golf_club"},
         {"type":"minecraft:item", "weight": 5,"name":"craftingdead:night_stick"},
-        {"type":"minecraft:item", "weight": 5,"name":"craftingdead:sledge_hammer"},
+        {"type":"minecraft:item", "weight": 5,"name":"craftingdead:sledgehammer"},
         {"type":"minecraft:item", "weight": 5,"name":"craftingdead:nail_bat"},
         {"type":"minecraft:item", "weight": 5,"name":"craftingdead:shovel"},
         {"type":"minecraft:item", "weight": 5,"name":"craftingdead:hatchet"},
@@ -105,11 +105,9 @@
         {"type":"minecraft:item", "weight": 5,"name":"craftingdead:steel_bat"},
         {"type":"minecraft:item", "weight": 5,"name":"craftingdead:cleaver"},
         {"type":"minecraft:item", "weight": 5,"name":"craftingdead:broken_bottle"},
-        {"type": "minecraft:item", "weight": 25, "name": "minecraft:bread"},
-        {"type": "minecraft:item", "weight": 10, "name": "minecraft:honey_bottle"},
-        {"type": "minecraft:item", "weight": 25, "name": "minecraft:potion", "functions": [{"function": "minecraft:set_nbt", "tag": "Potion:\"minecraft:water\""}]}
-
-
+        {"type": "minecraft:item", "weight": 40, "name": "minecraft:bread"},
+        {"type": "minecraft:item", "weight": 20, "name": "minecraft:honey_bottle"},
+        {"type": "minecraft:item", "weight": 40, "name": "minecraft:potion", "functions": [{"function": "minecraft:set_nbt", "tag": "Potion:\"minecraft:water\""}]}
       ]
     }
   ]
