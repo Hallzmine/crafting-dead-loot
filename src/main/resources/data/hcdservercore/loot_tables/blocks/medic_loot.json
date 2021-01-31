@@ -33,7 +33,7 @@
         {"type":"minecraft:item", "weight": 8,"name":"craftingdead:mp5a5"},
         {"type": "minecraft:item", "weight": 40, "name": "minecraft:bread"},
         {"type": "minecraft:item", "weight": 60, "name": "minecraft:honey_bottle"},
-        {"type": "minecraft:item", "weight": 55, "name": "minecraft:potion", "functions": [{"function": "minecraft:set_nbt", "tag": "Potion:\"minecraft:water\""}]}
+        {"type": "minecraft:item", "weight": 55, "name": "minecraft:potion", "functions": [{"function": "minecraft:set_nbt", "tag": "{Potion:\"minecraft:water\"}"}]}
 
       ]
     }
