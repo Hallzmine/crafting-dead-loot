@@ -80,9 +80,10 @@
         {"type":"minecraft:item", "weight": 10,"name":"craftingdead:crowbar"},
         {"type":"minecraft:item", "weight": 10,"name":"craftingdead:fire_axe"},
         {"type":"minecraft:item", "weight": 30,"name":"craftingdead:night_stick"},
-        {"type":"minecraft:item", "weight": 10,"name":"craftingdead:sledge_hammer"},
+        {"type":"minecraft:item", "weight": 10,"name":"craftingdead:sledgehammer"},
         {"type":"minecraft:item", "weight": 10,"name":"craftingdead:bolt_cutters"},
-        {"type":"minecraft:item", "weight": 10,"name":"craftingdead:combat_knife"}
+        {"type":"minecraft:item", "weight": 10,"name":"craftingdead:combat_knife"},
+        {"type":"minecraft:item", "weight": 25,"name":"hcdservercore:parachute"}
       ]
     }
   ]
