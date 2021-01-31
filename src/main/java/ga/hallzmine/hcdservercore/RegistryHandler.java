@@ -8,29 +8,28 @@ import ga.hallzmine.hcdservercore.effects.ParachuteEffect;
 import ga.hallzmine.hcdservercore.items.ParachuteItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.attributes.Attribute;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.Item;
+import net.minecraft.item.Rarity;
 import net.minecraft.potion.Effect;
-import net.minecraft.potion.Potion;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.network.IContainerFactory;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.UUID;
 
 public class RegistryHandler {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ServercoreMod.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ServercoreMod.MOD_ID);
     public static final DeferredRegister<Effect> EFFECTS = DeferredRegister.create(ForgeRegistries.POTIONS, ServercoreMod.MOD_ID);
+    public static final DeferredRegister<ContainerType<?>> CONTAINERTYPE = DeferredRegister.create(ForgeRegistries.CONTAINERS, ServercoreMod.MOD_ID);
 
     public static void init() {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         EFFECTS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        CONTAINERTYPE.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     public static final RegistryObject<Block> MILITARY_LOOT = BLOCKS.register("military_loot", () -> new LootPileBase(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0f, 5.0f), "military"));
@@ -66,5 +65,10 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> PARACHUTE = ITEMS.register("parachute", () -> new ParachuteItem());
     public static final RegistryObject<Effect> PARACHUTEEFFECT = EFFECTS.register("parachute", () -> new ParachuteEffect());
+
+    //public static final RegistryObject<Item> LARGE_BACKPACK = ITEMS.register("large_backpack", () -> new BackpackItem(5, Rarity.EPIC));
+    //public static final RegistryObject<Item> BACKPACK = ITEMS.register("backpack", () -> new BackpackItem(3, Rarity.RARE));
+
+    //public static final RegistryObject<ContainerType<?>> BACKPACKTYPE = CONTAINERTYPE.register("backpack_container", () -> new ContainerType<>((IContainerFactory<BackpackContainer>) (windowId, playerInventory, data) -> new BackpackContainer(windowId, playerInventory, data.readVarInt())));
 
 }
