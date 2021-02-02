@@ -130,8 +130,7 @@
         {"type":"minecraft:item", "weight": 10,"name":"craftingdead:shovel"},
         {"type":"minecraft:item", "weight": 10,"name":"craftingdead:bolt_cutters"},
         {"type":"minecraft:item", "weight": 10,"name":"craftingdead:combat_knife"},
-        {"type":"minecraft:item", "weight": 10,"name":"hcdservercore:parachute"},
-        {"type":"minecraft:item", "weight": 10,"name":"travelersbackpack:standard"}
+        {"type":"minecraft:item", "weight": 10,"name":"hcdservercore:parachute"}
 
       ]
     }
