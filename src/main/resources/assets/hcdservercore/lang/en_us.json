@@ -5,6 +5,10 @@
   "block.hcdservercore.civilian_loot_gen": "Civilian Loot Generator",
   "block.hcdservercore.civilian_rare_loot_gen": "Rare Civilian Loot Generator",
   "item.hcdservercore.parachute": "Parachute",
+  "item.hcdservercore.metal_scrap": "Metal Scrap",
+  "item.hcdservercore.metal_ore": "Metal Ore",
+  "block.hcdservercore.fake_ore": "Mine Block",
+  "block.hcdservercore.broken_fake_ore": "Mine Block",
   "effect.hcdservercore.parachute": "Parachute",
   "itemGroup.hcdservercoreTab": "Hallzmine's Crafting Dead Server Core"
 }

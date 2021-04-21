@@ -1,10 +1,8 @@
 package ga.hallzmine.hcdservercore;
 
-import ga.hallzmine.hcdservercore.blocks.BlockItemBase;
-import ga.hallzmine.hcdservercore.blocks.HiddenBlockItemBase;
-import ga.hallzmine.hcdservercore.blocks.LootGenBase;
-import ga.hallzmine.hcdservercore.blocks.LootPileBase;
+import ga.hallzmine.hcdservercore.blocks.*;
 import ga.hallzmine.hcdservercore.effects.ParachuteEffect;
+import ga.hallzmine.hcdservercore.items.ItemBase;
 import ga.hallzmine.hcdservercore.items.ParachuteItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -63,8 +61,17 @@ public class RegistryHandler {
     public static final RegistryObject<Block> POLICE_LOOT_GEN = BLOCKS.register("police_loot_gen", () -> new LootGenBase(Block.Properties.create(Material.STRUCTURE_VOID).hardnessAndResistance(5.0f, 5.0f), "police"));
     public static final RegistryObject<Item> POLICE_LOOT_GEN_ITEM = ITEMS.register("police_loot_gen", () -> new BlockItemBase(POLICE_LOOT_GEN.get()));
 
+    public static final RegistryObject<Block> FAKE_ORE_BLOCK = BLOCKS.register("fake_ore", () -> new FakeOreBlock());
+    public static final RegistryObject<Item> FAKE_ORE_BLOCK_ITEM = ITEMS.register("fake_ore", () -> new BlockItemBase(FAKE_ORE_BLOCK.get()));
+
+    public static final RegistryObject<Block> BROKEN_FAKE_ORE_BLOCK = BLOCKS.register("broken_fake_ore", () -> new BrokenFakeOreBlock());
+    public static final RegistryObject<Item> BROKEN_FAKE_ORE_BLOCK_ITEM = ITEMS.register("broken_fake_ore", () -> new HiddenBlockItemBase(BROKEN_FAKE_ORE_BLOCK.get()));
+
     public static final RegistryObject<Item> PARACHUTE = ITEMS.register("parachute", () -> new ParachuteItem());
     public static final RegistryObject<Effect> PARACHUTEEFFECT = EFFECTS.register("parachute", () -> new ParachuteEffect());
+
+    public static final RegistryObject<Item> METAL_SCRAP = ITEMS.register("metal_scrap", () -> new ItemBase(new Item.Properties()));
+    public static final RegistryObject<Item> METAL_ORE = ITEMS.register("metal_ore", () -> new ItemBase(new Item.Properties()));
 
     //public static final RegistryObject<Item> LARGE_BACKPACK = ITEMS.register("large_backpack", () -> new BackpackItem(5, Rarity.EPIC));
     //public static final RegistryObject<Item> BACKPACK = ITEMS.register("backpack", () -> new BackpackItem(3, Rarity.RARE));

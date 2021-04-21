@@ -105,9 +105,9 @@
         {"type":"minecraft:item", "weight": 5,"name":"craftingdead:steel_bat"},
         {"type":"minecraft:item", "weight": 5,"name":"craftingdead:cleaver"},
         {"type":"minecraft:item", "weight": 5,"name":"craftingdead:broken_bottle"},
-        {"type": "minecraft:item", "weight": 40, "name": "minecraft:bread"},
-        {"type": "minecraft:item", "weight": 20, "name": "minecraft:honey_bottle"},
-        {"type": "minecraft:item", "weight": 40, "name": "minecraft:potion", "functions": [{"function": "minecraft:set_nbt", "tag": "{Potion:\"minecraft:water\"}"}]}
+        {"type": "minecraft:item", "weight": 80, "name": "minecraft:bread"},
+        {"type": "minecraft:item", "weight": 40, "name": "minecraft:honey_bottle"},
+        {"type": "minecraft:item", "weight": 80, "name": "minecraft:potion", "functions": [{"function": "minecraft:set_nbt", "tag": "{Potion:\"minecraft:water\"}"}]}
       ]
     }
   ]
