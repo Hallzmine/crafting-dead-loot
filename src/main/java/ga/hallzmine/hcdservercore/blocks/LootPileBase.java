@@ -14,7 +14,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 
 public class LootPileBase extends Block {
-    String loot_type;
+    private final String loot_type;
 
     public LootPileBase(Properties properties, String loot_type_in) {
         super(properties.notSolid());
@@ -24,6 +24,11 @@ public class LootPileBase extends Block {
 
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+        // It is client side
+        if (worldIn.isRemote()) {
+            return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
+        }
+
         worldIn.destroyBlock(pos, true);
         switch (this.loot_type) {
             case "military":
